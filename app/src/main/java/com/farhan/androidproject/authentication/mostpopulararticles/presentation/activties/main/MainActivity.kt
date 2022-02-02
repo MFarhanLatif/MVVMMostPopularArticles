@@ -105,6 +105,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
 
+        setButtonBackground(period)
+
         viewModel.popularArticlesList.observe(this, Observer {
             when (it) {
 
@@ -124,6 +126,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         })
     }
 
+    fun setButtonBackground(period: Int) {
+        when (period) {
+            7 -> {
+                button1.setBackgroundColor(resources.getColor(R.color.black))
+                button2.setBackgroundColor(resources.getColor(R.color.teal_200))
+                button3.setBackgroundColor(resources.getColor(R.color.black))
+
+            }
+            30 -> {
+                button1.setBackgroundColor(resources.getColor(R.color.black))
+                button2.setBackgroundColor(resources.getColor(R.color.black))
+                button3.setBackgroundColor(resources.getColor(R.color.teal_200))
+
+            }
+            else -> {
+                button1.setBackgroundColor(resources.getColor(R.color.teal_200))
+                button2.setBackgroundColor(resources.getColor(R.color.black))
+                button3.setBackgroundColor(resources.getColor(R.color.black))
+
+            }
+
+        }
+    }
 }
 
 

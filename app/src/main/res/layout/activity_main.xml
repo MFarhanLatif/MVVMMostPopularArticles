@@ -8,50 +8,53 @@
 
 
     <Button
-        android:elevation="5dp"
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"
+        android:elevation="5dp"
         android:padding="5dp"
         android:text="1 Day"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:elevation="5dp"
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:layout_margin="16dp"
         android:layout_marginTop="16dp"
+        android:elevation="5dp"
         android:padding="5dp"
         android:text="7 Day"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
 
-        android:elevation="5dp"
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:layout_margin="16dp"
         android:layout_marginTop="16dp"
+        android:elevation="5dp"
         android:padding="5dp"
         android:text="30 Day"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
