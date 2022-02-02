@@ -1,0 +1,25 @@
+package com.farhan.androidproject.authentication.mostpopulararticles.models
+
+data class ArticleModel(
+                        val uri: String,
+                        val url: String,
+                        val id:Long,
+                        val asset_id :Long ,
+                        val source: String,
+                        val published_date: String,
+                        val updated:String,
+                        val section:String,
+                        val subsection:String,
+                        val nytdsection:String,
+                        val adx_keywords:String,
+                        val column:Int?,
+                        val byline:String,
+                        val type:String,
+                        val title:String,
+                        val abstract:String,
+                        val des_facet:List<String>,
+                        val org_facet:List<String>,
+                        val per_facet:List<String>,
+                        val geo_facet:List<String?>,
+                        val media:List<MediaModel>,
+                        val eta_id:Int)
