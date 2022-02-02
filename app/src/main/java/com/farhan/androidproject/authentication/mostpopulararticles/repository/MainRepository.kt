@@ -5,5 +5,7 @@ import retrofit2.Call
 
 interface MainRepository {
 
-    fun getPopularArticles() : Call<APIResult>
+    fun getPopularArticles(): Call<APIResult>
+    fun getPopularArticlesWeakly(): Call<APIResult>
+    fun getPopularArticlesMonthly(): Call<APIResult>
 }

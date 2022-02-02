@@ -39,7 +39,45 @@ class MainViewModel constructor(private val repository: MainRepository) : ViewMo
             }
         })
     }
+    fun getPopularArticlesWeakly() {
 
+        _popularArticlesList.postValue(ArticleState.Loading(null))
+
+        val response = repository.getPopularArticlesWeakly()
+        response.enqueue(object : Callback<APIResult> {
+            override fun onResponse(call: Call<APIResult>, response: Response<APIResult>) {
+                if(response.isSuccessful) {
+
+                    _popularArticlesList.postValue(ArticleState.Success(response.body()!!.results))
+                }
+            }
+
+            override fun onFailure(call: Call<APIResult>, t: Throwable) {
+                //errorMessage.postValue(t.message)
+                _popularArticlesList.postValue(ArticleState.Error(null,t.message?:"error"))
+            }
+        })
+    }
+
+    fun getPopularArticlesMonthly() {
+
+        _popularArticlesList.postValue(ArticleState.Loading(null))
+
+        val response = repository.getPopularArticlesMonthly()
+        response.enqueue(object : Callback<APIResult> {
+            override fun onResponse(call: Call<APIResult>, response: Response<APIResult>) {
+                if(response.isSuccessful) {
+
+                    _popularArticlesList.postValue(ArticleState.Success(response.body()!!.results))
+                }
+            }
+
+            override fun onFailure(call: Call<APIResult>, t: Throwable) {
+                //errorMessage.postValue(t.message)
+                _popularArticlesList.postValue(ArticleState.Error(null,t.message?:"error"))
+            }
+        })
+    }
     //sealed class stateflow
 
 
